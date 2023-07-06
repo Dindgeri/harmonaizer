@@ -2,11 +2,11 @@
 <website xmlns="http://www.w3.org/1999/xhtml" xmlns:css="http://www.w3.org/2001/XMLSchema-css">
 
   <head>
-    <title>Harmonaizer - Your AI Music</title>
+    <title>Harmonaizer - Your Artificial Intelligent Music On Demand!</title>
     <style>
       <![CDATA[
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Arial", sans-serif;
         margin: 0 auto;
         max-width: 800px;
         padding: 20px;
@@ -142,47 +142,35 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#community">Community</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <div class="content">
       <section id="home" class="section">
-        <h1>Welcome to Harmonaizer</h1>
-        <p>Your artificial intelligent music - on demand!</p>
+        <h1>Harmonaizer</h1>
+        <p>Your Artificial Intelligent Music - On Demand!</p>
       </section>
       <section id="services" class="section">
-        <h2>Our Services</h2>
-        <p>At Harmonaizer, we offer a range of AI music generation services to suit your needs:</p>
-        <ul>
-          <li>Backtrack Music for Hip Hop</li>
-          <li>Video Game Music Loops</li>
-          <li>Film Scoring</li>
-          <li>Sound Design</li>
-          <li>Background Ambiences</li>
-          <li>Music Records</li>
-          <!-- Add more services as needed -->
-        </ul>
+        <h2>Services</h2>
+        <p>Harmonaizer offers AI-generated MIDI music created from Python code using Apple Logic Pro. Whether you need backtrack music for hip hop, video game music loops, film scoring, sound design, background ambiences, or music records, we've got you covered!</p>
+        <p>Our talented AI algorithms will compose music tailored to your needs, delivering high-quality and unique compositions.</p>
+        <p>Join our Discord server for a vibrant community where you can discuss your musical requirements and interact with other music enthusiasts.</p>
       </section>
       <section id="pricing" class="section">
         <h2>Pricing</h2>
         <p>Our pricing is based on the duration of the music:</p>
         <ul>
-          <li>0 to 5 minutes: Starting from $X or X Ethereum</li>
-          <li>5 to 15 minutes: Starting from $X or X Ethereum</li>
-          <li>15 to 30 minutes: Starting from $X or X Ethereum</li>
+          <li>0 minutes to 5 minutes - $XX or XX Ethereum</li>
+          <li>5 minutes to 15 minutes - $XX or XX Ethereum</li>
+          <li>15 minutes to 30 minutes - $XX or XX Ethereum</li>
         </ul>
+        <p>Prices may vary based on the complexity and specific requirements of your project. Contact us for a detailed quote.</p>
       </section>
-      <section id="community" class="section">
-        <h2>Join Our Community</h2>
-        <p>Harmonaizer is more than just a service; it's a community of music enthusiasts:</p>
-        <ul>
-          <li>Connect with fellow musicians</li>
-          <li>Share your creations</li>
-          <li>Collaborate on projects</li>
-          <li>Receive updates and news</li>
-        </ul>
-        <p>Join our Discord server to be a part of the Harmonaizer community.</p>
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>We'd love to hear from you! Reach out to us on our Discord server for inquiries, collaborations, or any questions you may have regarding our services.</p>
+        <p>Join our Discord community and immerse yourself in the world of AI-generated music!</p>
       </section>
     </div>
     <script>
@@ -190,25 +178,19 @@
       const sections = document.querySelectorAll(".section");
       const burgerMenu = document.querySelector(".burger-menu");
       const navBar = document.querySelector(".nav-bar");
-      burgerMenu.addEventListener("click", () => {
-        navBar.classList.toggle("active");
-      });
       navLinks.forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          const targetSectionId = link.getAttribute("href").substring(1);
+        // Add click event listener to each navigation link
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          const targetId = link.getAttribute("href").substring(1);
           sections.forEach((section) => {
             section.style.display = "none";
           });
-          document.getElementById(targetSectionId).style.display = "block";
-          link.parentElement.classList.add("active");
-          navLinks.forEach((navLink) => {
-            if (navLink !== link) {
-              navLink.parentElement.classList.remove("active");
-            }
-          });
-          navBar.classList.remove("active");
+          document.getElementById(targetId).style.display = "block";
         });
+      });
+      burgerMenu.addEventListener("click", () => {
+        navBar.classList.toggle("active");
       });
     </script>
   </body>
