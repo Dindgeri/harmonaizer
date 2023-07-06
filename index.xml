@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<website xmlns="http://www.w3.org/1999/xhtml" xmlns:css="http://www.w3.org/2001/XMLSchema-css">
+
+  <head>
+    <title>Harmonaizer - Your AI Music</title>
+    <style>
+      <![CDATA[
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 20px;
+      }
+
+      .logo {
+        display: block;
+        margin: 0 auto;
+        width: 100px;
+        fill: #00868C;
+      }
+
+      .burger-menu {
+        display: none;
+      }
+
+      .nav-bar {
+        display: flex;
+        justify-content: center;
+        background: #00B3BB;
+        padding: 10px;
+      }
+
+      .nav-bar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+
+      .nav-bar ul li {
+        margin-right: 10px;
+      }
+
+      .nav-bar ul li a {
+        color: #FFF;
+        text-decoration: none;
+      }
+
+      .content {
+        margin-top: 20px;
+      }
+
+      .section {
+        display: none;
+      }
+
+      .section#home {
+        display: block;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+
+      p {
+        margin-bottom: 10px;
+        text-align: justify;
+      }
+
+      ul {
+        margin-top: 10px;
+        padding-left: 20px;
+      }
+
+      @media only screen and (max-width: 1080px) {
+        .nav-bar {
+          display: contents;
+        }
+
+        h1 {
+          text-align: center;
+          font-size: 32px;
+        }
+
+        h2 {
+          font-size: 24px;
+          margin-top: 20px;
+        }
+
+        p {
+          font-size: 24px;
+        }
+
+        .logo {
+          display: none;
+        }
+
+        .burger-menu {
+          display: block;
+          cursor: pointer;
+          fill: #00868C;
+          margin-right: 80%;
+        }
+
+        .nav-bar ul {
+          flex-direction: column;
+          background: #00B3BB;
+          padding: 10px;
+          display: none;
+          font-size: 24px;
+        }
+
+        .nav-bar.active ul {
+          display: flex;
+        }
+
+        .nav-bar ul li {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+      ]]>
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 24 24">
+        <path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm0 2C6.485 2 2 6.485 2 12s4.485 10 10 10 10-4.485 10-10S17.515 2 12 2zm-1.18 5.257v8.487c0 .3.243.543.543.543h.44c.3 0 .543-.243.543-.543v-8.487c0-.3-.243-.543-.543-.543h-.44c-.3 0-.543.243-.543.543zm2.35 0v8.487c0 .3.243.543.543.543h.44c.3 0 .543-.243.543-.543v-8.487c0-.3-.243-.543-.543-.543h-.44c-.3 0-.543.243-.543.543z" />
+      </svg>
+      <div class="burger-menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+        </svg></div>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#community">Community</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content">
+      <section id="home" class="section">
+        <h1>Welcome to Harmonaizer</h1>
+        <p>Your artificial intelligent music - on demand!</p>
+      </section>
+      <section id="services" class="section">
+        <h2>Our Services</h2>
+        <p>At Harmonaizer, we offer a range of AI music generation services to suit your needs:</p>
+        <ul>
+          <li>Backtrack Music for Hip Hop</li>
+          <li>Video Game Music Loops</li>
+          <li>Film Scoring</li>
+          <li>Sound Design</li>
+          <li>Background Ambiences</li>
+          <li>Music Records</li>
+          <!-- Add more services as needed -->
+        </ul>
+      </section>
+      <section id="pricing" class="section">
+        <h2>Pricing</h2>
+        <p>Our pricing is based on the duration of the music:</p>
+        <ul>
+          <li>0 to 5 minutes: Starting from $X or X Ethereum</li>
+          <li>5 to 15 minutes: Starting from $X or X Ethereum</li>
+          <li>15 to 30 minutes: Starting from $X or X Ethereum</li>
+        </ul>
+      </section>
+      <section id="community" class="section">
+        <h2>Join Our Community</h2>
+        <p>Harmonaizer is more than just a service; it's a community of music enthusiasts:</p>
+        <ul>
+          <li>Connect with fellow musicians</li>
+          <li>Share your creations</li>
+          <li>Collaborate on projects</li>
+          <li>Receive updates and news</li>
+        </ul>
+        <p>Join our Discord server to be a part of the Harmonaizer community.</p>
+      </section>
+    </div>
+    <script>
+      const navLinks = document.querySelectorAll("nav ul li a");
+      const sections = document.querySelectorAll(".section");
+      const burgerMenu = document.querySelector(".burger-menu");
+      const navBar = document.querySelector(".nav-bar");
+      burgerMenu.addEventListener("click", () => {
+        navBar.classList.toggle("active");
+      });
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const targetSectionId = link.getAttribute("href").substring(1);
+          sections.forEach((section) => {
+            section.style.display = "none";
+          });
+          document.getElementById(targetSectionId).style.display = "block";
+          link.parentElement.classList.add("active");
+          navLinks.forEach((navLink) => {
+            if (navLink !== link) {
+              navLink.parentElement.classList.remove("active");
+            }
+          });
+          navBar.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</website>
